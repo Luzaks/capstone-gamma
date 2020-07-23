@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import photos from './photosReducer';
+import curiosity from './curiosityReducer';
 
 const rootReducer = combineReducers({
-  photos
+  curiosity
 });
 
 export default rootReducer;

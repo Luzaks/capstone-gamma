@@ -1,8 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import fetch from '../Axios/AxiosFetch';
+import fetch_api from '../Redux/actions/actions';
 
 const InputRow = styled.div`
     border: 1px solid black;
@@ -21,6 +22,9 @@ const Card = styled.div`
 `;
 
 const Main = () => {
+
+    const dispatch = useDispatch();
+
     return (
       <div className="container">
           <InputRow className="row col-12">
@@ -28,9 +32,12 @@ const Main = () => {
           </InputRow>
           <CardRow className="row col-12">
               <Card className="card">
-                  {
-                      console.log(fetch)
-                  }
+                  <button
+                  onClick={() => {
+                      dispatch(fetch_api());
+                  }}>
+
+              </button>
               </Card>
           </CardRow>
       </div>

@@ -2,7 +2,7 @@ import { FETCH_FAILURE,
          FETCH_REQUEST,
          FETCH_SUCCESS } from '../actions/actionTypes';
 
-const photos = (state = [], action) => {
+const curiosity = (state = [], action) => {
     switch (action.type) {
         case FETCH_REQUEST:
             return {
@@ -12,17 +12,18 @@ const photos = (state = [], action) => {
         case FETCH_SUCCESS:
             return {
                 loading: false,
-                searched: action.payload,
+                photos: action.payload.photos,
+                sol: action.payload.sol,
                 error: ''
             };
         case FETCH_FAILURE:
             return {
                 loading: false,
-                searched: [],
+                photos: [],
                 error: action.payload
             };
         default: return state;
     }
 };
 
-export default photos;
+export default curiosity;
