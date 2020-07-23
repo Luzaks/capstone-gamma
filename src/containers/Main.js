@@ -1,9 +1,36 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+const InputRow = styled.div`
+    border: 1px solid black;
+`;
+
+const CardRow = styled.div`
+    border: 1px solid red;
+`;
+
+const Input = styled.input`
+    color: red;
+`;
+
+const Card = styled.div`
+    border: 1px solid blue;
+`;
 
 const Main = () => {
     return (
-      <Navbar />
+      <div className="container">
+          <InputRow className="row col-12">
+              <Input type="select"/>
+          </InputRow>
+          <CardRow className="row col-12">
+              <Card className="card">
+                  something
+              </Card>
+          </CardRow>
+      </div>
     );
 };
 
