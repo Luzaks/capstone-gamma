@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import fetch from '../Axios/AxiosFetch';
 
 const InputRow = styled.div`
     border: 1px solid black;
@@ -27,7 +28,9 @@ const Main = () => {
           </InputRow>
           <CardRow className="row col-12">
               <Card className="card">
-                  something
+                  {
+                      console.log(fetch)
+                  }
               </Card>
           </CardRow>
       </div>
