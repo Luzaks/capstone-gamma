@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
@@ -32,12 +32,7 @@ const Main = () => {
           </InputRow>
           <CardRow className="row col-12">
               <Card className="card">
-                  <button
-                  onClick={() => {
-                      dispatch(fetch_api());
-                  }}>
 
-              </button>
               </Card>
           </CardRow>
       </div>

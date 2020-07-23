@@ -2,7 +2,7 @@ import { FETCH_FAILURE,
          FETCH_REQUEST,
          FETCH_SUCCESS } from '../actions/actionTypes';
 
-const curiosity = (state = [], action) => {
+const rover = (state = [], action) => {
     switch (action.type) {
         case FETCH_REQUEST:
             return {
@@ -26,4 +26,4 @@ const curiosity = (state = [], action) => {
     }
 };
 
-export default curiosity;
+export default rover;

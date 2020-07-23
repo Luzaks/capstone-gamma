@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import curiosity from './curiosityReducer';
+import rover from './roverReducer';
+import filter from './filterReducer';
 
 const rootReducer = combineReducers({
-  curiosity
+  rover,
+  filter
 });
 
 export default rootReducer;

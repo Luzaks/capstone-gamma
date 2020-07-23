@@ -1,9 +1,17 @@
+import { CHANGE_FILTER } from './actionTypes';
 import {
     FETCH_FAILURE,
     FETCH_REQUEST,
     FETCH_SUCCESS
 } from './actionTypes';
 import Axios from 'axios';
+
+function filterCreator(filter) {
+    return {
+        type: CHANGE_FILTER,
+        payload: filter,
+    };
+}
 
 const fetch_request = () => {
     return {
@@ -29,8 +37,7 @@ const fetch_failure = (error) => {
     }
 };
 
-const fetch_api = () => {
-    const rover = 'opportunity';
+const fetch_api = (rover) => {
     const sol = '10';
     const APIkey = '0DQdoReiu09VZ7KRIb07wks4D7xiFNqWC6jZk4ip';
 
@@ -47,6 +54,7 @@ const fetch_api = () => {
 };
 
 export {
+    filterCreator,
     fetch_request,
     fetch_success,
     fetch_failure,
