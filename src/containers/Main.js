@@ -20,7 +20,7 @@ const Input = styled.input`
 
 const Main = () => {
 
-
+  const [rover, set_rover] = useState('');
   const [sol, set_sol] = useState(0);
   const dispatch = useDispatch();
     const rovers = ['curiosity', 'opportunity', 'spirit'];
@@ -46,7 +46,10 @@ const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM']
       <div className="container">
         <InputRow className="row col-12">
             <select className="filter-selector" name="filter"
-                    >
+                    onChange={
+                        (ev) => {
+                        set_rover(ev.target.value);
+                    }}>
                 <option value="Rovers" selected disabled hidden>Rovers</option>
                 {
                     rovers.map(rover =>
@@ -66,7 +69,7 @@ const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM']
 
             <button className="btn btn-primary mt-3"
                     onClick={() => {
-                        dispatch(fetch_api('curiosity',sol));
+                        dispatch(fetch_api(rover,sol));
                     }}>
                 Submit
             </button>
