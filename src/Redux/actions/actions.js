@@ -44,7 +44,7 @@ const fetch_api = (rover = 'spirit', sol = '10') => {
    dispatch(fetch_request());
    Axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${APIkey}`)
      .then((r) => {
-       dispatch(fetch_success( rover, r.data.photos, parseInt(sol, 10) ))
+       dispatch(fetch_success( rover, r.data.photos, parseInt(sol, 10)))
      })
      .catch(onerror => {
        dispatch(fetch_failure('Ups. Something went wrong.'))
