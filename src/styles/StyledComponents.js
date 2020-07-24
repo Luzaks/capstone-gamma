@@ -20,8 +20,8 @@ const ImgsRow = styled.div`
   border: 1px solid red;
 `;
 
-const Input = styled.input`
-  color: red;
+const Select = styled.input`
+  height: 40px;
 `;
 
 const Card = styled.div`
@@ -46,7 +46,7 @@ export {
     Title,
     InputRow,
     ImgsRow,
-    Input,
+    Select,
     Card,
     Img,
     Footy

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Img} from '../styles/StyledComponents';
+import {Img} from '../../styles/StyledComponents';
 
 const Photo = ({ item, rover }) => {
     return (

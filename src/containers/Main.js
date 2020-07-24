@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PhotosList from './PhotosList';
 import { camerasCreator } from '../Redux/actions/actions';
-import { InputRow, ImgsRow } from '../styles/StyledComponents';
-import FetchingRover from '../components/FetchingRover';
-import FetchingSol from '../components/FetchingSol';
-import SubmitButton from '../components/SubmitButton';
+import { ImgsRow } from '../styles/StyledComponents';
+import NavBar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -25,13 +23,9 @@ const Main = () => {
   };
 
     return (
-      <div className="container">
-        <InputRow className="row col-12">
-          <FetchingRover setRover={set_rover} rovers={rovers} />
-          <FetchingSol setSol={set_sol} sol={sol} />
-          <SubmitButton rover={rover} uiHelper={uiHelper} dispatch={dispatch} sol={sol} />
-        </InputRow>
-        <ImgsRow className="row col-12">
+      <div className="main-container row">
+          <NavBar setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} rover={rover}  uiHelper={uiHelper}  dispatch={dispatch} />
+        <ImgsRow className="container col-12">
           <PhotosList />
         </ImgsRow>
       </div>

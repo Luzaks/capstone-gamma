@@ -1,5 +1,5 @@
 import React from 'react';
-import {filterCreator} from '../Redux/actions/actions';
+import {filterCreator} from '../../Redux/actions/actions';
 
 const CameraFilter = ({ dispatch, cameras }) => {
   return (

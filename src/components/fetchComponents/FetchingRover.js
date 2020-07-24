@@ -2,7 +2,7 @@ import React from 'react';
 
 const FetchingRover = ( {setRover, rovers }  ) => {
   return (
-    <select className="filter-selector" name="filter"
+    <select className="filter-rover" name="filter"
             onChange={
               (ev) => {
                 setRover(ev.target.value);

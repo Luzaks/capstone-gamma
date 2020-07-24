@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { filterCreator } from '../Redux/actions/actions';
 import { Card } from '../styles/StyledComponents';
-import Photo from '../components/Photo';
-import CameraFilter from '../components/CameraFilter';
+import Photo from '../components/photoComponents/Photo';
+import CameraFilter from '../components/photoComponents/CameraFilter';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -21,7 +20,7 @@ const PhotosList = () => {
 
   return (
     <Card>
-        <CameraFilter dispatch={dispatch} cameras={cameras} />
+      <CameraFilter dispatch={dispatch} cameras={cameras} />
       <Card>
         {
           filterHelper(filterState).map(item => <Photo item={item} rover={roverState} />)
