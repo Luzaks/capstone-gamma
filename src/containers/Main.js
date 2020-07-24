@@ -25,7 +25,7 @@ const Main = () => {
     return (
       <div className="main-container row">
           <NavBar setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} rover={rover}  uiHelper={uiHelper}  dispatch={dispatch} />
-        <ImgsRow className="container col-12">
+        <ImgsRow className="container col-12 d-flex align-items-center justify-content-center">
           <PhotosList />
         </ImgsRow>
       </div>

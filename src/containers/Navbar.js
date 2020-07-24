@@ -12,7 +12,7 @@ const NavBar = ({ setRover, rovers, setSol, sol, rover, uiHelper, dispatch }) =>
             <Title className="m-0">
                 gamma
             </Title>
-            <InputRow className="row col-6">
+            <InputRow className="row">
                 <FetchingRover setRover={setRover} rovers={rovers} />
                 <FetchingSol setSol={setSol} sol={sol} />
                 <SubmitButton rover={rover} uiHelper={uiHelper} dispatch={dispatch} sol={sol} />

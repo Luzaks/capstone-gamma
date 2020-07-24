@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Nav = styled.nav`
   background-color: black;
   height: 45px;
-  padding: 0 7.5%;
+  padding: 0 3.5%;
 `;
 
 const Title = styled.h1`
@@ -27,12 +27,23 @@ const Select = styled.input`
 const Card = styled.div`
   border: 1px solid blue;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Catalog = styled.div`
+  border: 1px solid blue;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 27px;
 `;
 
 const Img = styled.img`
-  width: 400px;
-  height: 400px;
-  margin: 20px;
+  width: 350px;
+  height: 350px;
+  margin: 10px;
 `;
 
 const Footy = styled.footer`
@@ -48,6 +59,7 @@ export {
     ImgsRow,
     Select,
     Card,
+    Catalog,
     Img,
     Footy
 }
