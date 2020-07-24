@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import fetch_api from '../Redux/actions/actions';
 import PhotosList from './PhotosList';
 import { camerasCreator } from '../Redux/actions/actions';
 import { InputRow, ImgsRow } from '../styles/StyledComponents';
