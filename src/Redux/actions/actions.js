@@ -1,10 +1,18 @@
-import { CHANGE_FILTER } from './actionTypes';
 import {
+  CHANGE_FILTER,
+  CHANGE_CAMERAS,
   FETCH_FAILURE,
   FETCH_REQUEST,
   FETCH_SUCCESS
 } from './actionTypes';
 import Axios from 'axios';
+
+function camerasCreator(cams) {
+  return {
+    type: CHANGE_CAMERAS,
+    payload: cams,
+  };
+}
 
 function filterCreator(filter) {
   return {
@@ -54,6 +62,7 @@ const fetch_api = (rover = 'spirit', sol = '10') => {
 };
 
 export {
+  camerasCreator,
   filterCreator,
   fetch_request,
   fetch_success,

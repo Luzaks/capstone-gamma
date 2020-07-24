@@ -6,7 +6,8 @@ const initialState = {
     sol: 0,
     error: ''
   },
-  filter: 'ALL'
+  filter: 'ALL',
+  cameras: ['something']
 };
 
 export default initialState;

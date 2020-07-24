@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterCreator } from '../Redux/actions/actions';
+import { camerasCreator } from '../Redux/actions/actions';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import styled from 'styled-components';
-import fetch from "../Redux/actions/Axios";
 
 
 const Card = styled.div`
@@ -23,8 +23,7 @@ const PhotosList = () => {
   const dispatch = useDispatch();
   const rover = useSelector(state => state.rover);
   const filterState = useSelector(state => state.filter);
-
-  const cameras = ['ALL', 'FHAZ', 'RHAZ', 'MAST', 'CHEMCAM', 'MAHLI', 'MARDI', 'NAVCAM', 'PANCAM', 'MINITES'];
+  const cameras = useSelector(state => state.cameras);
 
   const filterHelper = (filter) => {
       if (filter === 'ALL') return rover.photos;

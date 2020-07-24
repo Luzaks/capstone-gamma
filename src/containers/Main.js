@@ -20,11 +20,20 @@ const Input = styled.input`
 
 const Main = () => {
 
+
   const [sol, set_sol] = useState(0);
   const dispatch = useDispatch();
     const rovers = ['curiosity', 'opportunity', 'spirit'];
 
 /*
+const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM'];
+  const cams_set = ['FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
+
+  const camerasHelper = (cams) => {
+      if (rover.rover_name === 'curiosity') dispatch(cur_set);
+      else dispatch(cams_set)
+  };
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch_api('curiosity');
@@ -36,7 +45,8 @@ const Main = () => {
     return (
       <div className="container">
         <InputRow className="row col-12">
-            <select className="filter-selector" name="filter">
+            <select className="filter-selector" name="filter"
+                    >
                 <option value="Rovers" selected disabled hidden>Rovers</option>
                 {
                     rovers.map(rover =>
