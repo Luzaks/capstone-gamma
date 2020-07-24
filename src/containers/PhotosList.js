@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { filterCreator } from '../Redux/actions/actions';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import styled from 'styled-components';
@@ -17,15 +18,17 @@ const Img = styled.img`
 `;
 
 const PhotosList = () => {
-  const [cam, set_cam] = useState('');
+
+  const dispatch = useDispatch();
   const rover = useSelector(state => state.rover);
+
   const cameras = ['ALL', 'FHAZ', 'RHAZ', 'MAST', 'CHEMCAM', 'MAHLI', 'MARDI', 'NAVCAM', 'PANCAM', 'MINITES'];
 
   return (
     <Card>
       <div>
-        <select className="filter-selector" name="filter" onChange={(ev) => {
-          set_cam(ev.target.value);
+        <select className="filter-selector" name="Cams" onChange={(ev) => {
+          dispatch(filterCreator(ev.target.value));
         }}>
           <option value="Cameras" selected disabled hidden />
           { cameras.map(camera => <option key={camera} value={camera}>{camera}</option>)}

@@ -6,7 +6,7 @@ const initialState = {
     sol: 0,
     error: ''
   },
-  filter: 'all'
+  filter: 'ALL'
 };
 
 export default initialState;
