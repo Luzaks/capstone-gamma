@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FetchingInput = ( {setRover, rovers }  ) => {
+const FetchingRover = ( {setRover, rovers }  ) => {
   return (
     <select className="filter-selector" name="filter"
             onChange={
@@ -19,4 +19,4 @@ const FetchingInput = ( {setRover, rovers }  ) => {
   );
 };
 
-export default FetchingInput;
+export default FetchingRover;

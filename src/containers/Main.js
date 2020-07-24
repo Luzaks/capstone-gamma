@@ -4,7 +4,8 @@ import fetch_api from '../Redux/actions/actions';
 import PhotosList from './PhotosList';
 import { camerasCreator } from '../Redux/actions/actions';
 import { InputRow, ImgsRow } from '../styles/StyledComponents';
-import FetchingInput from '../components/FetchingInput';
+import FetchingRover from '../components/FetchingRover';
+import FetchingSol from '../components/FetchingSol';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -26,16 +27,8 @@ const Main = () => {
     return (
       <div className="container">
         <InputRow className="row col-12">
-          <FetchingInput setRover={set_rover} rovers={rovers} />
-          <label htmlFor="sol">Sol:</label>
-          <input type="number" id="sol" name="sol" min="0" max="1000"
-                   value={ sol }
-                   onChange={
-                       (ev) => {
-                           set_sol(ev.target.value);
-                       }
-                   }/>
-
+          <FetchingRover setRover={set_rover} rovers={rovers} />
+          <FetchingSol setSol={set_sol} sol={sol} />
             <button className="btn btn-primary mt-3"
                     onClick={() => {
                         uiHelper(rover);
