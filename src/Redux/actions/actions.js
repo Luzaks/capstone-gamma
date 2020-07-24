@@ -19,11 +19,11 @@ const fetch_request = () => {
     }
 };
 
-const fetch_success = (photos, sol) => {
-    console.log(sol);
+const fetch_success = (rover, photos, sol) => {
     return {
         type: FETCH_SUCCESS,
         payload: {
+            rover_name: rover,
             photos: photos,
             sol: sol
         }
@@ -37,15 +37,14 @@ const fetch_failure = (error) => {
     }
 };
 
-const fetch_api = (rover) => {
-    const sol = '10';
-    const APIkey = '0DQdoReiu09VZ7KRIb07wks4D7xiFNqWC6jZk4ip';
+const fetch_api = (rover = 'spirit', sol = '10') => {
 
+    const APIkey = '0DQdoReiu09VZ7KRIb07wks4D7xiFNqWC6jZk4ip';
     return (dispatch) => {
         dispatch(fetch_request());
         Axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${APIkey}`)
             .then((r) => {
-                dispatch(fetch_success(r.data.photos, 10))
+                dispatch(fetch_success( rover, r.data.photos, parseInt(sol, 10) ))
             })
             .catch(onerror => {
                 dispatch(fetch_failure('Ups. Something went wrong.'))

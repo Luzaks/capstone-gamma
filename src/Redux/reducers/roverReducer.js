@@ -11,6 +11,7 @@ const rover = (state = [], action) => {
             };
         case FETCH_SUCCESS:
             return {
+                rover_name: action.payload.rover_name,
                 loading: false,
                 photos: action.payload.photos,
                 sol: action.payload.sol,
