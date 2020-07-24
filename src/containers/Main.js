@@ -6,6 +6,7 @@ import { camerasCreator } from '../Redux/actions/actions';
 import { InputRow, ImgsRow } from '../styles/StyledComponents';
 import FetchingRover from '../components/FetchingRover';
 import FetchingSol from '../components/FetchingSol';
+import SubmitButton from '../components/SubmitButton';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -29,13 +30,7 @@ const Main = () => {
         <InputRow className="row col-12">
           <FetchingRover setRover={set_rover} rovers={rovers} />
           <FetchingSol setSol={set_sol} sol={sol} />
-            <button className="btn btn-primary mt-3"
-                    onClick={() => {
-                        uiHelper(rover);
-                        dispatch(fetch_api(rover,sol));
-                    }}>
-                Submit
-            </button>
+          <SubmitButton rover={rover} uiHelper={uiHelper} dispatch={dispatch} sol={sol} />
         </InputRow>
         <ImgsRow className="row col-12">
           <PhotosList />
