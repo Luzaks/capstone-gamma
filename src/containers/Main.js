@@ -1,23 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
 import fetch_api from '../Redux/actions/actions';
 import PhotosList from './PhotosList';
 import { camerasCreator } from '../Redux/actions/actions';
-
-const InputRow = styled.div`
-  border: 1px solid black;
-`;
-
-const ImgsRow = styled.div`
-  border: 1px solid red;
-`;
-
-const Input = styled.input`
-  color: red;
-`;
+import { InputRow, ImgsRow } from '../styles/StyledComponents';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 const Main = () => {
 
@@ -26,8 +14,8 @@ const Main = () => {
   const dispatch = useDispatch();
   const rovers = ['curiosity', 'opportunity', 'spirit'];
 
-    const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM'];
-    const cams_set = ['FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
+    const cur_set = ['ALL', 'FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM'];
+    const cams_set = ['ALL', 'FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
 
     const uiHelper = (roverName) => {
         if (roverName === 'curiosity') dispatch(camerasCreator(cur_set));

@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterCreator } from '../Redux/actions/actions';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import styled from 'styled-components';
-
-
-const Card = styled.div`
-  border: 1px solid blue;
-  width: 100%;
-`;
-
-const Img = styled.img`
-  width: 400px;
-  height: 400px;
-  margin: 20px;
-`;
+import { Card, Img } from '../styles/StyledComponents';
 
 const PhotosList = () => {
 

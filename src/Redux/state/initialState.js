@@ -7,7 +7,7 @@ const initialState = {
     error: ''
   },
   filter: 'ALL',
-  cameras: ['Click on submit']
+  cameras: ['ALL']
 };
 
 export default initialState;
