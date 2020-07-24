@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterCreator } from '../Redux/actions/actions';
-import { camerasCreator } from '../Redux/actions/actions';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import styled from 'styled-components';

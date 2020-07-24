@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import fetch_api from '../Redux/actions/actions';
 import PhotosList from './PhotosList';
+import { camerasCreator } from '../Redux/actions/actions';
 
 const InputRow = styled.div`
   border: 1px solid black;
@@ -23,16 +24,18 @@ const Main = () => {
   const [rover, set_rover] = useState('');
   const [sol, set_sol] = useState(0);
   const dispatch = useDispatch();
-    const rovers = ['curiosity', 'opportunity', 'spirit'];
+  const rovers = ['curiosity', 'opportunity', 'spirit'];
+
+    const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM'];
+    const cams_set = ['FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
+
+    const uiHelper = (roverName) => {
+        if (roverName === 'curiosity') dispatch(camerasCreator(cur_set));
+        else dispatch(camerasCreator(cams_set))
+    };
 
 /*
-const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM'];
-  const cams_set = ['FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
 
-  const camerasHelper = (cams) => {
-      if (rover.rover_name === 'curiosity') dispatch(cur_set);
-      else dispatch(cams_set)
-  };
 
   useEffect(() => {
     async function fetchData() {
@@ -69,6 +72,7 @@ const cur_set = ['FHAZ', 'RHAZ', 'MAST', 'CHEMCAM' , 'MAHLI', 'MARDI', 'NAVCAM']
 
             <button className="btn btn-primary mt-3"
                     onClick={() => {
+                        uiHelper(rover);
                         dispatch(fetch_api(rover,sol));
                     }}>
                 Submit
