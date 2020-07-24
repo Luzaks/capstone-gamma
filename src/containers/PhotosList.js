@@ -27,7 +27,7 @@ const PhotosList = () => {
         <select className="filter-selector" name="filter" onChange={(ev) => {
           set_cam(ev.target.value);
         }}>
-          <option value="Categories" selected disabled hidden>CAMERAS</option>
+          <option value="Cameras" selected disabled hidden />
           { cameras.map(camera => <option key={camera} value={camera}>{camera}</option>)}
         </select>
       </div>
