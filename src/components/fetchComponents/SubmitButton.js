@@ -11,7 +11,7 @@ const SubmitButton = ({ rover, uiHelper, dispatch, sol }) => {
                 dispatch(fetch_api(rover, sol));
               }
             }>
-      Submit
+      See
     </button>
     );
 };

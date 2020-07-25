@@ -9,14 +9,14 @@ import SubmitButton from '../components/fetchComponents/SubmitButton';
 
 import { Link } from 'react-router-dom';
 
-const NavBar = ({ setRover, rovers, setSol, sol, rover, uiHelper, dispatch }) => {
+const NavBar = ({ roverState, setRover, rovers, setSol, sol, rover, uiHelper, dispatch }) => {
     return (
         <Nav className="col-12 d-flex justify-content-between align-items-center">
             <Title className="m-0">
                 <Link to={{pathname: '/'}}> gamma </Link>
             </Title>
             <InputRow className="row">
-                <FetchingRover setRover={setRover} rovers={rovers} />
+                <FetchingRover roverState={roverState} rover={rover} setRover={setRover} rovers={rovers} />
                 <FetchingSol setSol={setSol} sol={sol} />
                 <SubmitButton rover={rover} uiHelper={uiHelper} dispatch={dispatch} sol={sol} />
             </InputRow>
