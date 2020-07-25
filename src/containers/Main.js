@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 const Main = () => {
 
   const [rover, set_rover] = useState('');
-  const [sol, set_sol] = useState(0);
+  const [sol, set_sol] = useState('');
   const dispatch = useDispatch();
   const rovers = ['curiosity', 'opportunity', 'spirit'];
 

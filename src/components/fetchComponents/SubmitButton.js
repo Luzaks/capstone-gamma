@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import fetch_api from '../../Redux/actions/actions';
 
 const SubmitButton = ({ rover, uiHelper, dispatch, sol }) => {
@@ -7,12 +8,19 @@ const SubmitButton = ({ rover, uiHelper, dispatch, sol }) => {
             onClick={
               () => {
                 uiHelper(rover);
-                dispatch(fetch_api(rover,sol));
+                dispatch(fetch_api(rover, sol));
               }
             }>
       Submit
     </button>
     );
+};
+
+SubmitButton.propTypes = {
+    rover: PropTypes.string.isRequired,
+    uiHelper: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    sol: PropTypes.string.isRequired,
 };
 
 export default SubmitButton;

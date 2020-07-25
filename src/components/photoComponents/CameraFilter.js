@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {filterCreator} from '../../Redux/actions/actions';
 
 const CameraFilter = ({ dispatch, cameras }) => {
@@ -15,6 +16,11 @@ const CameraFilter = ({ dispatch, cameras }) => {
           </select>
       </div>
   );
+};
+
+CameraFilter.ppropTypes = {
+    dispatch: PropTypes.func.isRequired,
+    cameras: PropTypes.array.isRequired
 };
 
 export default CameraFilter;

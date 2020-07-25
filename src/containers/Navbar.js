@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {InputRow, Nav, Title} from '../styles/StyledComponents';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
@@ -19,6 +20,16 @@ const NavBar = ({ setRover, rovers, setSol, sol, rover, uiHelper, dispatch }) =>
             </InputRow>
         </Nav>
     );
+};
+
+NavBar.propTypes = {
+    setRover: PropTypes.func.isRequired,
+    rovers: PropTypes.array.isRequired,
+    setSol: PropTypes.func.isRequired,
+    sol: PropTypes.string.isRequired,
+    rover: PropTypes.string.isRequired,
+    uiHelper: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired
 };
 
 export default NavBar;

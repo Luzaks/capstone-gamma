@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const FetchingRover = ( {setRover, rovers }  ) => {
+const FetchingRover = ( { setRover, rovers }  ) => {
   return (
     <select className="filter-rover" name="filter"
             onChange={
@@ -17,6 +18,11 @@ const FetchingRover = ( {setRover, rovers }  ) => {
         }
     </select>
   );
+};
+
+FetchingRover.propTypes = {
+  setRover: PropTypes.func.isRequired,
+  rovers: PropTypes.array.isRequired
 };
 
 export default FetchingRover;

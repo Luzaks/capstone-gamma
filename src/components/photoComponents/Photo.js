@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { ImgContainer, Img } from '../../styles/StyledComponents';
 import LinkPhoto from './LinkPhoto';
 
@@ -11,6 +12,11 @@ const Photo = ({ item, rover }) => {
         { isHovered && ( <LinkPhoto/> ) }
       </ImgContainer>
     );
+};
+
+Photo.propTypes = {
+    item: PropTypes.object.isRequired,
+    rover: PropTypes.object.isRequired
 };
 
 export default Photo;

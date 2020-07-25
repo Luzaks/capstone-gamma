@@ -26,7 +26,7 @@ const PhotosList = () => {
       <Card>
         <Catalog>
           {
-            filterHelper(filterState).map(item => <Photo item={item} rover={roverState} />)
+            filterHelper(filterState).map(item => <Photo key={item.id} item={item} rover={roverState} />)
           }
         </Catalog>
       </Card>
