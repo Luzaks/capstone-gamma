@@ -1,27 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { photosCreator } from '../../Redux/actions/actions';
-import { Link } from 'react-router-dom';
 
-const LinkPhoto = ({ img, dispatch }) => {
+const LinkPhoto = () => {
   return (
-     <div className="photo-hover-layer">
-       <Link to={{pathname: `/item/${img.id}`}}
-             onClick={() => {
-               dispatch(photosCreator(img))
-               }
-             }>
-             <p className="photo-hover-link">
-               See details
-             </p>
-       </Link>
-     </div>
-    );
-};
-
-LinkPhoto.propTypes = {
-    img: PropTypes.object.isRequired,
-    dispatch: PropTypes.func.isRequired
+    <div className="photo-hover-layer">
+      <p className="photo-hover-link">
+        See details
+      </p>
+    </div>
+  );
 };
 
 export default LinkPhoto;
