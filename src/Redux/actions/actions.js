@@ -1,4 +1,5 @@
 import {
+  CHANGE_PHOTO,
   CHANGE_FILTER,
   CHANGE_CAMERAS,
   FETCH_FAILURE,
@@ -11,6 +12,13 @@ function camerasCreator(cams) {
   return {
     type: CHANGE_CAMERAS,
     payload: cams,
+  };
+}
+
+function photosCreator(imgObject) {
+  return {
+    type: CHANGE_PHOTO,
+    payload: imgObject
   };
 }
 
@@ -62,6 +70,7 @@ const fetch_api = (rover = 'spirit', sol = '10') => {
 };
 
 export {
+  photosCreator,
   camerasCreator,
   filterCreator,
   fetch_request,

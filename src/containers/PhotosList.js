@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Card, Catalog } from '../styles/StyledComponents';
+import {Card, Catalog} from '../styles/StyledComponents';
 import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
 import 'bootstrap/dist/css/bootstrap.css';

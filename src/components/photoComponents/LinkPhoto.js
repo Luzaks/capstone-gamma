@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const LinkPhoto = () => {
+const LinkPhoto = ({ img }) => {
     return (
         <div className="photo-hover-layer">
-            <p className="photo-hover-link">
-                See details
-            </p>
+            <Link to={ {pathname: `/item/${img.id}`}}>
+                <p className="photo-hover-link">
+                    See details
+                </p>
+            </Link>
         </div>
     );
 };

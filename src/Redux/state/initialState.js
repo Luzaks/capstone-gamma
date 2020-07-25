@@ -7,7 +7,8 @@ const initialState = {
     error: ''
   },
   filter: 'ALL',
-  cameras: ['ALL']
+  cameras: ['ALL'],
+  photo: {}
 };
 
 export default initialState;

@@ -9,7 +9,7 @@ const Photo = ({ item, rover }) => {
       <ImgContainer onMouseOver={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}>
         <Img className="photo-item" src={item.img_src} alt={`rover-${rover.rover_name}`} />
-        { isHovered && ( <LinkPhoto/> ) }
+        { isHovered && ( <LinkPhoto img={item} /> ) }
       </ImgContainer>
     );
 };
