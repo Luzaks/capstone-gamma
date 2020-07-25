@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Item = () => {
+const Item = ({img}) => {
     return (
         <div>
+            {console.log(img)}
             Item
         </div>
     );
