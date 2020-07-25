@@ -20,10 +20,6 @@ const ImgsRow = styled.div`
   border: 1px solid red;
 `;
 
-const Select = styled.input`
-  height: 40px;
-`;
-
 const Card = styled.div`
   border: 1px solid blue;
   width: 100%;
@@ -40,10 +36,20 @@ const Catalog = styled.div`
   padding: 27px;
 `;
 
-const Img = styled.img`
+const ImgContainer = styled.div`
+  position: relative;
   width: 350px;
   height: 350px;
   margin: 10px;
+  float: left;
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+const Img = styled.img`
+  width: 350px;
+  height: 350px;
 `;
 
 const Footy = styled.footer`
@@ -57,8 +63,8 @@ export {
     Title,
     InputRow,
     ImgsRow,
-    Select,
     Card,
+    ImgContainer,
     Catalog,
     Img,
     Footy
