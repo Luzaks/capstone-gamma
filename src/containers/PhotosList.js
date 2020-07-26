@@ -5,13 +5,13 @@ import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import PropTypes from 'prop-types';
 
-const PhotosList = () => {
+const PhotosList = ({cameras, filterState}) => {
 
   const dispatch = useDispatch();
   const roverState = useSelector(state => state.rover);
-  const filterState = useSelector(state => state.filter);
-  const cameras = useSelector(state => state.cameras);
+
 
   const filterHelper = (filter) => {
     if (filter === 'ALL') return roverState.photos;
@@ -32,6 +32,11 @@ const PhotosList = () => {
       </Card>
     </Card>
   );
+};
+
+PhotosList.propTypes = {
+  cameras: PropTypes.array.isRequired,
+  filterState: PropTypes.string.isRequired
 };
 
 export default PhotosList;

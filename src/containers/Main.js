@@ -19,15 +19,18 @@ const Main = () => {
   const cams_set = ['ALL', 'FHAZ', 'RHAZ', 'NAVCAM', 'PANCAM', 'MINITES'];
 
   const uiHelper = (roverName) => {
-    if (roverName === 'curiosity') dispatch(camerasCreator(cur_set));
+    if (roverName === 'Curiosity') dispatch(camerasCreator(cur_set));
     else dispatch(camerasCreator(cams_set))
   };
+
+  const cameras = useSelector(state => state.cameras);
+  const filterState = useSelector(state => state.filter);
 
     return (
       <div className="main-container row">
           <NavBar roverState={roverState} setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} rover={rover} uiHelper={uiHelper}  dispatch={dispatch} />
         <ImgsRow className="container col-12 d-flex flex-column align-items-center justify-content-center">
-          <PhotosList />
+          <PhotosList filterState={filterState} cameras={cameras} />
         </ImgsRow>
       </div>
     );
