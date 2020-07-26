@@ -1,4 +1,5 @@
 import {
+  CHANGE_VISITED,
   CHANGE_PHOTO,
   CHANGE_FILTER,
   CHANGE_CAMERAS,
@@ -7,6 +8,13 @@ import {
   FETCH_SUCCESS
 } from './actionTypes';
 import Axios from 'axios';
+
+function visitedCreator(imgId) {
+  return {
+    type: CHANGE_VISITED,
+    payload: imgId
+  }
+}
 
 function camerasCreator(cams) {
   return {
@@ -70,6 +78,7 @@ const fetch_api = (rover, sol) => {
 };
 
 export {
+  visitedCreator,
   photosCreator,
   camerasCreator,
   filterCreator,

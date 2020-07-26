@@ -54,6 +54,16 @@ const Catalog = styled.div`
   padding: 27px;
 `;
 
+const PhotoContainer = styled.div`
+ width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+  margin: 10px;
+`;
+
 const ImgContainer = styled.div`
   position: relative;
   width: 350px;
@@ -85,6 +95,7 @@ export {
     CardMenu,
     ParMenu,
     MenuItem,
+    PhotoContainer,
     ImgContainer,
     Catalog,
     Img,

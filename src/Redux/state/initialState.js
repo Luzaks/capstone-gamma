@@ -8,7 +8,8 @@ const initialState = {
   },
   filter: 'ALL',
   cameras: ['ALL'],
-  photo: {}
+  photo: {},
+  last_visited: ''
 };
 
 export default initialState;

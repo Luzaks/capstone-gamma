@@ -56,9 +56,9 @@ const PhotosList = ({ rover, solState, cameras, filterState}) => {
           </div>
       );
 
-      if (roverState.rover_name === '' && roverState.photos.length === 0 && roverState.sol ==='Choose..' && roverState.error === '') return appInstructions;
+      if (roverState.rover_name === '' && roverState.photos.length === 0 && roverState.sol ==='Choose..' && roverState.error === '' && roverState.loading === false) return appInstructions;
+      else if ((roverState.rover_name === '' && roverState.photos.length === 0 && roverState.sol ==='Choose..' && roverState.error === '' && roverState.loading === true) || roverState.loading === true ) return loadingPhotos;
       else if (roverState.error !== '') return appError;
-      else if (roverState.loading === true) return loadingPhotos;
       else if (roverState.photos.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noPhotos;
       else if (photosList.length > 0 && roverState.rover_name !== '' && roverState.loading === false) return photosList;
       else if (photosList.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noCamPhotos;
