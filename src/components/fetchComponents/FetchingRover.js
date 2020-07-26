@@ -1,21 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UiHelper from '../helpers/uiHelper';
 
 const FetchingRover = ( { roverState, setRover, rovers }  ) => {
 
-  const roverUiHelper = (rover) => {
-    const selected = (
-      <option key={rover} value={rover} selected >
-        {rover}
-      </option> );
-    const normal = (
-      <option key={rover} value={rover} >
-        {rover}
-      </option>
-    );
-    if ((rover === roverState) && (roverState !== '')) return selected;
-    else return normal;
-  };
   return (
     <select className="filter-rover" name="filter"
             onChange={
@@ -25,7 +13,7 @@ const FetchingRover = ( { roverState, setRover, rovers }  ) => {
             }>
       <option value="Rovers" selected disabled hidden />
         {
-          rovers.map(rover => roverUiHelper(rover) )
+          rovers.map(rover => UiHelper(rover, roverState) )
         }
     </select>
   );
