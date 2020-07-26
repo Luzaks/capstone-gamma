@@ -21,7 +21,7 @@ const PhotosList = ({cameras, filterState}) => {
   return (
     <Card>
       <Card>
-        <CameraFilter dispatch={dispatch} cameras={cameras} />
+        <CameraFilter filterState={filterState} dispatch={dispatch} cameras={cameras} />
       </Card>
       <Card>
         <Catalog>

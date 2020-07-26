@@ -2,7 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {filterCreator} from '../../Redux/actions/actions';
 
-const CameraFilter = ({ dispatch, cameras }) => {
+const CameraFilter = ({ dispatch, cameras, filterState }) => {
+    const camUiHelper = (cam) => {
+        const selected = (
+            <option key={cam} value={cam} selected >
+                {cam}
+            </option> );
+        const normal = (
+            <option key={cam} value={cam} >
+                {cam}
+            </option>
+        );
+        if ((cam === filterState) && (filterState !== '')) return selected;
+        else return normal;
+    };
   return (
     <div>
       <select className="filter-selector" name="Cams"
@@ -11,8 +24,7 @@ const CameraFilter = ({ dispatch, cameras }) => {
                   dispatch(filterCreator(ev.target.value));
                 }
               }>
-              <option value="Cameras" selected disabled hidden > CAMERA </option>
-              { cameras.map(camera => <option key={camera} value={camera}>{camera}</option>)}
+              { cameras.map(camera => camUiHelper(camera)) }
           </select>
       </div>
   );
