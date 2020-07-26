@@ -3,7 +3,7 @@ const initialState = {
     rover_name: '',
     loading: false,
     photos: [],
-    sol: 0,
+    sol: 'Choose..',
     error: ''
   },
   filter: 'ALL',

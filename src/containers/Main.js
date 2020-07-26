@@ -10,8 +10,9 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 const Main = () => {
 
   const [rover, set_rover] = useState('');
-  const [sol, set_sol] = useState('');
+  const [sol, set_sol] = useState('1');
   const roverState = useSelector(state => state.rover.rover_name);
+  const solState = useSelector(state => state.rover.sol);
   const dispatch = useDispatch();
   const rovers = ['Curiosity', 'Opportunity', 'Spirit'];
 
@@ -28,9 +29,9 @@ const Main = () => {
 
     return (
       <div className="main-container row">
-          <NavBar roverState={roverState} setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} rover={rover} uiHelper={uiHelper}  dispatch={dispatch} />
+          <NavBar roverState={roverState} setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} solState={solState} rover={rover} uiHelper={uiHelper}  dispatch={dispatch} />
         <ImgsRow className="container col-12 d-flex flex-column align-items-center justify-content-center">
-          <PhotosList filterState={filterState} cameras={cameras} />
+          <PhotosList rover={rover} solState={solState} filterState={filterState} cameras={cameras} />
         </ImgsRow>
       </div>
     );

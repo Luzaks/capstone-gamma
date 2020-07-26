@@ -29,6 +29,24 @@ const Card = styled.div`
   justify-content: center;
 `;
 
+const CardMenu = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+`;
+
+const MenuItem = styled.div`
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ParMenu = styled.p`
+  margin: 0;
+`;
+
 const Catalog = styled.div`
   border: 1px solid blue;
   width: 1170px;
@@ -64,6 +82,9 @@ export {
     InputRow,
     ImgsRow,
     Card,
+    CardMenu,
+    ParMenu,
+    MenuItem,
     ImgContainer,
     Catalog,
     Img,

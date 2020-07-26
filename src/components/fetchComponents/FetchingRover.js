@@ -1,21 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UiHelper from '../helpers/uiHelper';
 
 const FetchingRover = ( { roverState, setRover, rovers }  ) => {
 
   return (
-    <select className="filter-rover" name="filter"
-            onChange={
-              (ev) => {
-                setRover(ev.target.value);
-              }
-            }>
-      <option value="Rovers" selected disabled hidden />
-        {
-          rovers.map(rover => UiHelper(rover, roverState) )
-        }
-    </select>
+    <React.Fragment>
+      <select className="filter-rover"
+              name="filter"
+              id="rover"
+              placeholder={roverState}
+              onChange={
+                (ev) => {
+                  setRover(ev.target.value);
+                }
+              }>
+          <option selected disabled hidden>Choose a rover</option>
+          {
+            rovers.map(rover =>
+              <option key={rover} value={rover} >
+                {rover}
+              </option>
+            )
+          }
+      </select>
+    </React.Fragment>
   );
 };
 
