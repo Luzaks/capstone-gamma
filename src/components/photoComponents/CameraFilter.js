@@ -13,7 +13,7 @@ const CameraFilter = ({ dispatch, cameras, filterState }) => {
                   dispatch(filterCreator(ev.target.value));
                 }
               }>
-              { cameras.map(camera => UiHelper(camera, filterState)) }
+              {  cameras.map(camera => UiHelper(camera, filterState)) }
           </select>
       </div>
   );

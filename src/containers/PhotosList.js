@@ -24,21 +24,44 @@ const PhotosList = ({ rover, solState, cameras, filterState}) => {
               Rover: {roverState.rover_name}  Martian Day: {solState}
           </ParMenu>
       );
-      if (solState !== 'Choose..' && rover === '') return roverInfo;
+      if (solState !== 'Choose..') return roverInfo;
   };
 
   const PhotoListHelper = (filterState) => {
 
+      const photosList = filterHelper(filterState).map(item => <Photo dispatch={dispatch} key={item.id} item={item} rover={roverState} />)
       const noPhotos = (
           <div>
               There aren't photos for today
           </div>
       );
+      const noCamPhotos = (
+          <div>
+              There aren't photos for this camera
+          </div>
+      );
+      const loadingPhotos = (
+          <div>
+              Loading
+          </div>
+      );
+      const appInstructions = (
+          <div>
+              Choose a Rover, pick a day and click on see button to show images.
+          </div>
+      );
+      const appError = (
+          <div>
+              {roverState.error}
+          </div>
+      );
 
-      if (roverState.photos.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noPhotos;
-      else return filterHelper(filterState).map(item => <Photo dispatch={dispatch} key={item.id} item={item} rover={roverState} />)
-
-
+      if (roverState.rover_name === '' && roverState.photos.length === 0 && roverState.sol ==='Choose..' && roverState.error === '') return appInstructions;
+      else if (roverState.error !== '') return appError;
+      else if (roverState.loading === true) return loadingPhotos;
+      else if (roverState.photos.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noPhotos;
+      else if (photosList.length > 0 && roverState.rover_name !== '' && roverState.loading === false) return photosList;
+      else if (photosList.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noCamPhotos;
   };
 
   return (

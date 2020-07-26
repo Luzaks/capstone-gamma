@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import fetch_api from '../../Redux/actions/actions';
+import {filterCreator} from '../../Redux/actions/actions'
 
 const SubmitButton = ({ rover, uiHelper, dispatch, sol }) => {
 
     const formValidation = (rover, sol) => {
         uiHelper(rover);
-        if ((rover !== '' && sol !== '') ) dispatch(fetch_api(rover, sol));
+        if ((rover !== '' && sol !== '') ){
+            dispatch(fetch_api(rover, sol));
+            dispatch(filterCreator('ALL'));
+        }
         else alert('Form not filled.');
-
     };
 
   return (
