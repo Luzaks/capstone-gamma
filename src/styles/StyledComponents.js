@@ -37,6 +37,22 @@ const CardMenu = styled.div`
   margin-top: 13.5px;
 `;
 
+const MenuItemStart = styled.div`
+  width: 33%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+`;
+
+const MenuItemEnd = styled.div`
+  width: 33%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+`;
+
 const MenuItem = styled.div`
   width: 33%;
   height: 24px;
@@ -106,6 +122,8 @@ export {
   Card,
   CardMenu,
   ParMenu,
+  MenuItemStart,
+  MenuItemEnd,
   MenuItem,
   PhotoContainer,
   ImgContainer,

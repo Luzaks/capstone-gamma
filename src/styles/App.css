@@ -1,3 +1,41 @@
+/*FetchingComponents */
+
+.filter-rover,
+.filter-sol,
+.fetch-submit-btn {
+  height: 30px;
+  margin: 0 5px;
+}
+
+.filter-rover {
+  min-width: 136px;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  margin-left: 12px;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  padding: 1px 2px;
+  background-image: url("../assets/imgs/download.png");
+  background-position-x: 95%;
+  background-position-y: 55%;
+  background-repeat: no-repeat;
+}
+
+.filter-sol {
+  width: 125px;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  padding: 0 2px;
+}
+
+.fetch-submit-btn {
+  width: 55px;
+  border: none;
+  border-radius: 7px;
+}
+
 /* Cams Filter */
 
 .filter-selector {
@@ -18,17 +56,12 @@
   background-repeat: no-repeat;
 }
 
-.filter-selector:hover {
+.filter-selector:hover,
+.filter-rover:hover,
+.filter-sol:hover {
   cursor: pointer;
 }
 
-/*FetchingComponents */
-
-.filter-rover,
-.filter-sol,
-.fetch-submit-btn {
-  height: 40px;
-}
 
 /* Photo Item */
 

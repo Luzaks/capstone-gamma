@@ -17,7 +17,7 @@ const SubmitButton = ({
   return (
     <button
       type="submit"
-      className="fetch-submit-btn btn btn-primary ml-3"
+      className="fetch-submit-btn"
       onClick={
               () => {
                 formValidation(rover, sol);

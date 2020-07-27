@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  Card, CardMenu, ParMenu, Catalog, MenuItem, Help,
+  Card, CardMenu, ParMenu, Catalog, MenuItem, Help, MenuItemStart, MenuItemEnd
 } from '../styles/StyledComponents';
 import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
@@ -27,7 +27,7 @@ const PhotosList = ({
         {' '}
         rover at
         {' '}
-        martian day
+        day
         {' '}
         {solState}
       </ParMenu>
@@ -101,15 +101,15 @@ const PhotosList = ({
   return (
     <Card>
       <CardMenu>
-        <MenuItem>
+        <MenuItemEnd>
           {infoHelper(solState)}
-        </MenuItem>
+        </MenuItemEnd>
         <MenuItem>
           <CameraFilter filterState={filterState} dispatch={dispatch} cameras={cameras} />
         </MenuItem>
-        <MenuItem>
+        <MenuItemStart>
           { visitedHelper(visitedState) }
-        </MenuItem>
+        </MenuItemStart>
       </CardMenu>
       <Card>
         <Catalog>
