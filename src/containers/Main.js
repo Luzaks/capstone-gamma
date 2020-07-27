@@ -13,6 +13,7 @@ const Main = () => {
   const [sol, set_sol] = useState('1');
   const roverState = useSelector(state => state.rover.rover_name);
   const solState = useSelector(state => state.rover.sol);
+  const visitedState = useSelector(state => state.last_visited);
   const dispatch = useDispatch();
   const rovers = ['Curiosity', 'Opportunity', 'Spirit'];
 
@@ -31,7 +32,7 @@ const Main = () => {
       <div className="main-container row">
           <NavBar roverState={roverState} setRover={set_rover} rovers={rovers} setSol={set_sol} sol={sol} solState={solState} rover={rover} uiHelper={uiHelper}  dispatch={dispatch} />
         <ImgsRow className="container col-12 d-flex flex-column align-items-center justify-content-center">
-          <PhotosList rover={rover} solState={solState} filterState={filterState} cameras={cameras} />
+          <PhotosList visitedState={visitedState} rover={rover} solState={solState} filterState={filterState} cameras={cameras} />
         </ImgsRow>
       </div>
     );

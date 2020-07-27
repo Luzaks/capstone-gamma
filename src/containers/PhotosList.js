@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import PropTypes from 'prop-types';
 
-const PhotosList = ({ rover, solState, cameras, filterState}) => {
+const PhotosList = ({ visitedState, rover, solState, cameras, filterState}) => {
 
   const dispatch = useDispatch();
   const roverState = useSelector(state => state.rover);
@@ -18,13 +18,22 @@ const PhotosList = ({ rover, solState, cameras, filterState}) => {
     else return roverState.photos.filter(photo => ( photo.camera.name === filter));
   };
 
-  const menuHelper = (solState, rover) => {
+  const infoHelper = (solState) => {
       const roverInfo = (
           <ParMenu>
               Rover: {roverState.rover_name}  Martian Day: {solState}
           </ParMenu>
       );
       if (solState !== 'Choose..') return roverInfo;
+  };
+
+  const visitedHelper = (visitedState) => {
+      const visitedInfo = (
+          <ParMenu>
+              Last visited: {visitedState}
+          </ParMenu>
+      );
+      if (visitedState !== '') return visitedInfo;
   };
 
   const PhotoListHelper = (filterState) => {
@@ -68,13 +77,13 @@ const PhotosList = ({ rover, solState, cameras, filterState}) => {
     <Card>
       <CardMenu>
           <MenuItem>
-              {menuHelper(solState, rover)}
+              {infoHelper(solState)}
           </MenuItem>
         <MenuItem>
           <CameraFilter filterState={filterState} dispatch={dispatch} cameras={cameras} />
         </MenuItem>
         <MenuItem>
-
+            { visitedHelper(visitedState) }
         </MenuItem>
       </CardMenu>
       <Card>
@@ -90,7 +99,8 @@ const PhotosList = ({ rover, solState, cameras, filterState}) => {
 
 PhotosList.propTypes = {
   cameras: PropTypes.array.isRequired,
-  filterState: PropTypes.string.isRequired
+  filterState: PropTypes.string.isRequired,
+  visitedState: PropTypes.string.isRequired
 };
 
 export default PhotosList;
