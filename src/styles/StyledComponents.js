@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  background-color: black;
   height: 45px;
   padding: 0 3.5%;
 `;
@@ -13,16 +12,16 @@ const Title = styled.h1`
 `;
 
 const InputRow = styled.div`
-  border: 1px solid black;
+  
 `;
 
 const ImgsRow = styled.div`
-  border: 1px solid red;
+  min-height: calc(100vh - 65.5px);
 `;
 
 const Card = styled.div`
-  border: 1px solid blue;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,10 +33,13 @@ const CardMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
+  padding: 0 25%;
+  margin-top: 13.5px;
 `;
 
 const MenuItem = styled.div`
   width: 33%;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,14 +50,23 @@ const ParMenu = styled.p`
 `;
 
 const Catalog = styled.div`
-  border: 1px solid blue;
   width: 1170px;
+  min-height: 100%;
   margin: 0 auto;
-  padding: 27px;
+  padding: 13.5px 27px;
+`;
+
+const Help = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const PhotoContainer = styled.div`
- width: 350px;
+  width: 350px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -80,8 +91,9 @@ const Img = styled.img`
 `;
 
 const Footy = styled.footer`
-  background-color: black;
-  color: white;
+  height: 20px;
+  font-size: 14px;
+  color: black;
   padding: 0 7.5%;
 `;
 
@@ -97,6 +109,7 @@ export {
   PhotoContainer,
   ImgContainer,
   Catalog,
+  Help,
   Img,
   Footy,
 };

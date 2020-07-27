@@ -23,4 +23,6 @@ body * {
 
 .main-container {
   margin: 0 !important;
+  width: 100%;
+  min-height: calc(100vh - 60px);
 }

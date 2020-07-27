@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  Card, CardMenu, ParMenu, Catalog, MenuItem,
+  Card, CardMenu, ParMenu, Catalog, MenuItem, Help,
 } from '../styles/StyledComponents';
 import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
@@ -37,14 +37,21 @@ const PhotosList = ({
   };
 
   const visitedHelper = visitedState => {
+    const visitedNone = (
+      <ParMenu>
+        Last visited:
+        None
+      </ParMenu>
+    );
     const visitedInfo = (
       <ParMenu>
         Last visited:
         {visitedState}
       </ParMenu>
     );
-    if (visitedState !== 0) return visitedInfo;
-    return <ParMenu />;
+    if (visitedState === 0 && roverState.rover_name !== '' && roverState.photos.length !== 0 && roverState.sol !== 'Choose..') return visitedNone;
+    if (visitedState !== 0 && roverState.rover_name !== '' && roverState.photos.length !== 0 && roverState.sol !== 'Choose..') return visitedInfo;
+    return <div />;
   };
 
   const PhotoListHelper = filterState => {
@@ -57,29 +64,29 @@ const PhotosList = ({
       />
     ));
     const noPhotos = (
-      <div>
-        There arent photos for today
-      </div>
+      <Help>
+        There are not photos for today
+      </Help>
     );
     const noCamPhotos = (
-      <div>
-        There arent photos for this camera
-      </div>
+      <Help>
+        There are no photos for this camera
+      </Help>
     );
     const loadingPhotos = (
-      <div>
+      <Help>
         Loading
-      </div>
+      </Help>
     );
     const appInstructions = (
-      <div>
-        Choose a Rover, pick a day and click on see button to show images.
-      </div>
+      <Help>
+        Choose a rover, pick a day and click on see button to show images.
+      </Help>
     );
     const appError = (
-      <div>
+      <Help>
         {roverState.error}
-      </div>
+      </Help>
     );
 
     if (roverState.rover_name === '' && roverState.photos.length === 0 && roverState.sol === 'Choose..' && roverState.error === '' && roverState.loading === false) return appInstructions;
@@ -88,7 +95,7 @@ const PhotosList = ({
     if (roverState.photos.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noPhotos;
     if (photosList.length > 0 && roverState.rover_name !== '' && roverState.loading === false) return photosList;
     if (photosList.length === 0 && roverState.rover_name !== '' && roverState.loading === false) return noCamPhotos;
-    return <div />;
+    return <Help />;
   };
 
   return (
