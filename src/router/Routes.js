@@ -5,10 +5,10 @@ import Main from '../containers/Main';
 import Item from '../components/itemComponents/Item';
 
 const Routes = () => (
-        <Switch>
-            <Route exact path="/" component={Main} />
-            <Route path="/item/:id" component={Item} />
-        </Switch>
+  <Switch>
+    <Route exact path="/" component={Main} />
+    <Route path="/item/:id" component={Item} />
+  </Switch>
 );
 
 export default Routes;

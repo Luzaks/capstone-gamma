@@ -86,17 +86,17 @@ const Footy = styled.footer`
 `;
 
 export {
-    Nav,
-    Title,
-    InputRow,
-    ImgsRow,
-    Card,
-    CardMenu,
-    ParMenu,
-    MenuItem,
-    PhotoContainer,
-    ImgContainer,
-    Catalog,
-    Img,
-    Footy
-}
+  Nav,
+  Title,
+  InputRow,
+  ImgsRow,
+  Card,
+  CardMenu,
+  ParMenu,
+  MenuItem,
+  PhotoContainer,
+  ImgContainer,
+  Catalog,
+  Img,
+  Footy,
+};

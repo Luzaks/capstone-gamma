@@ -4,12 +4,12 @@ const initialState = {
     loading: false,
     photos: [],
     sol: 'Choose..',
-    error: ''
+    error: '',
   },
   filter: 'ALL',
   cameras: ['ALL'],
   photo: {},
-  last_visited: ''
+  lastVisited: 0,
 };
 
 export default initialState;
