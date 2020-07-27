@@ -17,7 +17,7 @@ const Photo = ({ item, rover, dispatch }) => {
               }>
         <ImgContainer onMouseOver={() => setHover(true)}
                       onMouseLeave={() => setHover(false)}>
-          <Img className="photo-item" src={item.img_src} alt={`rover-${rover.id}`} />
+          <Img className="photo-item" src={item.img_src} alt={`photo-${item.id}`} />
           { isHovered && ( <LinkPhoto /> ) }
         </ImgContainer>
       </Link>

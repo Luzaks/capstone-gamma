@@ -2,12 +2,22 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import {visitedCreator} from '../../Redux/actions/actions';
 
 const mapStateToProps = state => ({ photo: state.photo });
+
+function mapDispatchToProps(dispatch) {
+    return {
+        addVisitedId: imgId => dispatch(visitedCreator(imgId)),
+    };
+}
+
 
 class Item extends Component {
     render() {
         const { photo } = this.props;
+        const {addVisitedId} = this.props;
+        addVisitedId(photo.id);
         return (
             <div className="item-container d-flex flex-column">
                 {console.log(photo)}
@@ -39,7 +49,8 @@ class Item extends Component {
 }
 
 Item.propTypes = {
-    photo: PropTypes.object.isRequired,
+  photo: PropTypes.object.isRequired,
+  addVisitedId: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps)(Item);
+export default connect(mapStateToProps, mapDispatchToProps)(Item);

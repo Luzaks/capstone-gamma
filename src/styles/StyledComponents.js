@@ -68,7 +68,6 @@ const ImgContainer = styled.div`
   position: relative;
   width: 350px;
   height: 350px;
-  margin: 10px;
   float: left;
   :hover {
     cursor: pointer;
