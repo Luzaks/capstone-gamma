@@ -101,6 +101,18 @@
 .item-nav-bar {
   width: 100%;
   height: 45px;
+  padding: 5px 15px;
+}
+
+.item-nav-bar ul {
+  list-style: none;
+}
+
+.item-nav-bar ul li {
+  color: black;
+  font-family: MeganJune, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 17px;
 }
 
 .item-info-container {
@@ -121,4 +133,67 @@
 .items-detail-container {
   width: 100%;
   height: calc(100% - 40px);
+}
+
+.item-details-ul-container {
+  width: 100%;
+  height: 55%;
+}
+
+.item-details-ul {
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  border-left: 1px dotted black;
+}
+
+.details-ul {
+  list-style: none;
+  width: 100%;
+  height: 15%;
+}
+
+.rover-introduction-ul {
+  list-style: none;
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  padding-right: 4%;
+}
+
+.details-info {
+  width: 100%;
+  margin-bottom: 1.5%;
+  font-family: MeganJune, sans-serif;
+  font-weight: 100;
+  font-size: 18.5px;
+}
+
+.item-details-elem p.details {
+  margin: 0;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  font-family: MeganJune, sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.item-details-elem p.rover-intro {
+  font-size: 27px;
+  letter-spacing: 1px;
+  font-family: MeganJune, sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+.item-details-elem p.rover-name {
+  margin: 0;
+  font-size: 72px;
+  font-family: DomillionBrushFree, sans-serif;
+}
+
+.item-details-li {
+  padding-left: 3%;
+  text-align: left;
 }
