@@ -5,6 +5,9 @@
 .fetch-submit-btn {
   height: 30px;
   margin: 0 5px;
+  border: none;
+  background-color: rgba(225, 225, 225, 0.2);
+  border-bottom: 2px solid #000;
 }
 
 .filter-rover {
@@ -14,8 +17,6 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   margin-left: 12px;
-  border: 1px solid lightgrey;
-  border-radius: 7px;
   padding: 1px 2px;
   background-image: url("../assets/imgs/download.png");
   background-position-x: 95%;
@@ -25,15 +26,11 @@
 
 .filter-sol {
   width: 125px;
-  border: 1px solid lightgrey;
-  border-radius: 7px;
   padding: 0 2px;
 }
 
 .fetch-submit-btn {
-  width: 55px;
-  border: none;
-  border-radius: 7px;
+  width: 45px;
 }
 
 /* Cams Filter */

@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'DomillionBrushFree';
+  src: local('DomillionBrushFree'),
+  url('../assets/fonts/DomillionBrushFree.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Elegant';
+  src: local('Elegant'),
+  url('../assets/fonts/ELEGANT.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +21,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fcf6f2 !important;
+  color: #000 !important;
 }
 
 code {

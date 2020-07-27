@@ -7,8 +7,8 @@ const Nav = styled.nav`
 
 const Title = styled.h1`
   font-size: 16px;
-  color: white;
   height: fit-content;
+  font-family: DomillionBrushFree;
 `;
 
 const InputRow = styled.div`

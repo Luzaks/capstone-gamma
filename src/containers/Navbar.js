@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { InputRow, Nav, Title } from '../styles/StyledComponents';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
@@ -13,7 +12,7 @@ const NavBar = ({
 }) => (
   <Nav className="col-12 d-flex justify-content-between align-items-center">
     <Title className="m-0">
-      <Link to={{ pathname: '/' }}> gamma </Link>
+      GAMMA
     </Title>
     <InputRow className="row">
       <FetchingRover roverState={roverState} rover={rover} setRover={setRover} rovers={rovers} />

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  Card, CardMenu, ParMenu, Catalog, MenuItem, Help, MenuItemStart, MenuItemEnd
+  Card, CardMenu, ParMenu, Catalog, MenuItem, Help, MenuItemStart, MenuItemEnd,
 } from '../styles/StyledComponents';
 import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
@@ -46,6 +46,7 @@ const PhotosList = ({
     const visitedInfo = (
       <ParMenu>
         Last visited:
+        {' '}
         {visitedState}
       </ParMenu>
     );
@@ -65,22 +66,23 @@ const PhotosList = ({
     ));
     const noPhotos = (
       <Help>
-        There are not photos for today
+        There are not photos for this day.
       </Help>
     );
     const noCamPhotos = (
       <Help>
-        There are no photos for this camera
+        There are no photos for this camera.
       </Help>
     );
     const loadingPhotos = (
       <Help>
-        Loading
+        Loading...
       </Help>
     );
     const appInstructions = (
       <Help>
-        Choose a rover, pick a day and click on see button to show images.
+        Choose a rover, pick a day (from one to one hundred)
+        and click on see button to show images.
       </Help>
     );
     const appError = (
