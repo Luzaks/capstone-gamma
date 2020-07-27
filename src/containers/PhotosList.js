@@ -23,11 +23,11 @@ const PhotosList = ({
   const infoHelper = solState => {
     const roverInfo = (
       <ParMenu>
-        Rover:
-        {' '}
         {roverState.rover_name}
         {' '}
-        Martian Day:
+        rover at
+        {' '}
+        martian day
         {' '}
         {solState}
       </ParMenu>

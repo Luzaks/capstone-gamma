@@ -33,7 +33,7 @@ const CardMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 0 25%;
+  padding: 0 25% 0 24%;
   margin-top: 13.5px;
 `;
 
@@ -47,6 +47,7 @@ const MenuItem = styled.div`
 
 const ParMenu = styled.p`
   margin: 0;
+  font-size: 15px;
 `;
 
 const Catalog = styled.div`

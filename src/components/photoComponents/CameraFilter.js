@@ -4,7 +4,9 @@ import { filterCreator } from '../../Redux/actions/actions';
 import UiHelper from '../helpers/uiHelper';
 
 const CameraFilter = ({ dispatch, cameras, filterState }) => (
-  <div>
+  <div className="d-flex">
+    Cams:
+    {' '}
     <select
       className="filter-selector"
       name="Cams"
