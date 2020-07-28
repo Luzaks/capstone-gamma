@@ -13,7 +13,8 @@ const Title = styled.h1`
 `;
 
 const InputRow = styled.div`
-  
+  font-family: 'MeganJune', sans-serif;
+  font-weight: 500;
 `;
 
 const ImgsRow = styled.div`
@@ -36,6 +37,8 @@ const CardMenu = styled.div`
   justify-content: start;
   padding: 0 25% 0 24%;
   margin-top: 13.5px;
+  font-family: MeganJune;
+  font-size: 17px;
 `;
 
 const MenuItemStart = styled.div`
@@ -64,7 +67,7 @@ const MenuItem = styled.div`
 
 const ParMenu = styled.p`
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
 `;
 
 const Catalog = styled.div`
@@ -77,6 +80,9 @@ const Catalog = styled.div`
 const Help = styled.div`
   width: 100%;
   height: 100%;
+  font-family: Opinio;
+  font-size: 24px;
+  letter-spacing: 0.5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,9 +116,10 @@ const Img = styled.img`
 
 const Footy = styled.footer`
   height: 20px;
-  font-size: 14px;
   color: black;
   padding: 0 7.5%;
+  font-family: Helvetica;
+  font-size: 10px;
 `;
 
 export {

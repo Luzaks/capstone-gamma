@@ -7,6 +7,8 @@ import App from './components/App';
 import './styles/index.css';
 import './assets/fonts/DomillionBrushFree.otf';
 import './assets/fonts/Impact_Label.ttf';
+import './assets/fonts/Opinio.otf';
+import './assets/fonts/MeganJune.ttf';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

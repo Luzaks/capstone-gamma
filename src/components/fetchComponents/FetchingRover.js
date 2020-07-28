@@ -14,7 +14,7 @@ const FetchingRover = ({ roverState, setRover, rovers }) => (
                 }
               }
     >
-      <option selected disabled hidden>Choose a rover</option>
+      <option selected disabled hidden>CHOOSE A ROVER</option>
       {
             rovers.map(rover => (
               <option key={rover} value={rover}>

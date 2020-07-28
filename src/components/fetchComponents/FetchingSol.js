@@ -10,7 +10,7 @@ const FetchingSol = ({ setSol }) => (
       name="sol"
       min="1"
       max="1000"
-      placeholder="Choose a day"
+      placeholder="CHOOSE A DAY"
       onChange={
                ev => {
                  setSol(ev.target.value);

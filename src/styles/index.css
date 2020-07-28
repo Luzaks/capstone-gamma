@@ -3,10 +3,29 @@
   src: local('DomillionBrushFree'),
   url('../assets/fonts/DomillionBrushFree.otf') format('truetype');
 }
+
 @font-face {
   font-family: 'ImpactLabel';
   src: local('ImpactLabel'),
   url('../assets/fonts/Impact_Label.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UGO-COLOR';
+  src: local('UGO-COLOR'),
+  url('../assets/fonts/alata-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Opinio';
+  src: local('Opinio'),
+  url('../assets/fonts/Opinio.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MeganJune';
+    src: local('MeganJune'),
+    url('../assets/fonts/MeganJune.ttf') format('truetype');
 }
 
 * {

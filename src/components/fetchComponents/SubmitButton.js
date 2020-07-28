@@ -24,7 +24,7 @@ const SubmitButton = ({
               }
             }
     >
-      See
+      SEE
     </button>
   );
 };
