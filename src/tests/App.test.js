@@ -1,9 +1,22 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from '../components/App';
+import AppMock from './mocks/AppMock';
+import fetchApi from '../Redux/actions/actions';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const fetched = fetchApi('Curiosity', '1');
+
+test('the App title element.', () => {
+  const { getByText } = render(<AppMock />);
+  const titleElement = getByText(/GAMMA/i);
+  expect(titleElement).toBeInTheDocument();
+});
+
+test('the App See element.', () => {
+  const { getByText } = render(<AppMock />);
+  const welcomeElement = getByText(/Choose a rover, pick/i);
+  expect(welcomeElement).toBeInTheDocument();
+});
+
+test('the fetched Api function of the entire App.', () => {
+  expect(typeof fetched).toBe('function');
 });

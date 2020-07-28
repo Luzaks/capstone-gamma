@@ -1,5 +1,3 @@
-/*FetchingComponents */
-
 .filter-rover,
 .filter-sol,
 .fetch-submit-btn {
@@ -34,8 +32,6 @@
   width: 45px;
 }
 
-/* Cams Filter */
-
 .filter-selector {
   min-width: 95px;
   -webkit-appearance: button;
@@ -58,15 +54,12 @@
   cursor: pointer;
 }
 
-
-/* Photo Item */
-
 .photo-hover-layer {
   position: absolute;
   width: 350px;
   height: 350px;
   top: 0;
-  left:0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,8 +83,6 @@
 .photo-hover-link:hover {
   text-decoration: underline;
 }
-
-/* Items */
 
 .item-container {
   width: 100%;
@@ -127,7 +118,7 @@
 }
 
 .right img {
- max-width: 100%;
+  max-width: 100%;
 }
 
 .items-detail-container {

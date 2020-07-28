@@ -12,22 +12,24 @@
   margin: 0 4px;
   background-color: #fcf6f2;
   border-radius: 50%;
-  animation: loading 1.5s cubic-bezier(.8, .5, .2, 1.4) infinite;
+  animation: loading 1.5s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
   transform-origin: bottom center;
   position: relative;
 }
 
 @keyframes loading {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
     background-color: #fcf6f2;
   }
+
   50% {
     transform: translateY(50px);
     background-color: #000;
   }
+
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
     background-color: #fcf6f2;
   }
 }

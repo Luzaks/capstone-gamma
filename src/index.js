@@ -9,7 +9,6 @@ import './assets/fonts/DomillionBrushFree.otf';
 import './assets/fonts/Impact_Label.ttf';
 import './assets/fonts/Opinio.otf';
 import './assets/fonts/MeganJune.ttf';
-import './assets/fonts/Vonique.ttf';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
