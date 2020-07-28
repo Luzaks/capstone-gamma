@@ -107,7 +107,11 @@ A tab will be opened in your default browser.
 ### 🛠 Built With
 
 *   React.js 
+*   Redux
+*   Redux Dev Tools
 *   React-Router-Dom
+*   Axios
+*   JSX
 *   Bootstrap
 *   Styled Components
 *   Prop-Types
