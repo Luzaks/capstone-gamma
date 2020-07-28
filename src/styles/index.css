@@ -4,9 +4,9 @@
   url('../assets/fonts/DomillionBrushFree.otf') format('truetype');
 }
 @font-face {
-  font-family: 'Elegant';
-  src: local('Elegant'),
-  url('../assets/fonts/ELEGANT.ttf') format('truetype');
+  font-family: 'ImpactLabel';
+  src: local('ImpactLabel'),
+  url('../assets/fonts/Impact_Label.ttf') format('truetype');
 }
 
 * {

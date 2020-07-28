@@ -6,7 +6,7 @@
   height: 30px;
   margin: 0 5px;
   border: none;
-  background-color: rgba(225, 225, 225, 0.2);
+  background-color: rgba(225, 225, 225, 0.75);
   border-bottom: 2px solid #000;
 }
 
@@ -26,7 +26,7 @@
 
 .filter-sol {
   width: 125px;
-  padding: 0 2px;
+  padding: 0 5px;
 }
 
 .fetch-submit-btn {
@@ -72,11 +72,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .photo-id-text {
-  margin-left: 10px;
+  font-family: 'ImpactLabel', sans-serif;
+  font-size: 20px;
 }
 
 .photo-hover-link {

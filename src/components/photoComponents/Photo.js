@@ -24,7 +24,10 @@ const Photo = ({ item, dispatch }) => {
           { isHovered && (<LinkPhoto />) }
         </ImgContainer>
       </Link>
-      <p className="photo-id-text">Photo: {' '}{item.id}</p>
+      <p className="photo-id-text">
+        Photo:
+        {item.id}
+      </p>
     </PhotoContainer>
   );
 };

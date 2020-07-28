@@ -6,7 +6,8 @@ const Nav = styled.nav`
 `;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
   height: fit-content;
   font-family: DomillionBrushFree;
 `;

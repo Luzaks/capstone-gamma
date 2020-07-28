@@ -6,6 +6,7 @@ import {
 } from '../styles/StyledComponents';
 import Photo from '../components/photoComponents/Photo';
 import CameraFilter from '../components/photoComponents/CameraFilter';
+import Loader from '../components/photoComponents/loaderComponent';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -76,7 +77,7 @@ const PhotosList = ({
     );
     const loadingPhotos = (
       <Help>
-        Loading...
+        <Loader />
       </Help>
     );
     const appInstructions = (

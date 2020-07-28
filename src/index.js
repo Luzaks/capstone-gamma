@@ -6,7 +6,7 @@ import store from './Redux/store/store';
 import App from './components/App';
 import './styles/index.css';
 import './assets/fonts/DomillionBrushFree.otf';
-import './assets/fonts/ELEGANT.ttf';
+import './assets/fonts/Impact_Label.ttf';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
