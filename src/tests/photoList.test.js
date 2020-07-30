@@ -2,14 +2,14 @@ import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PhotosListMock from './mocks/componentMocks/PhotoListMock';
+import PhotosList from '../containers/PhotosList';
 import filterPhotosHelper from '../components/helpers/filterPhotosHelper';
 import infoMenuHelper from '../components/helpers/infoMenuHelper';
 import visitedHelper from '../components/helpers/visitedHelper';
 import PhotoListHelper from '../components/helpers/photoListHelper';
 import photoListMock from './mocks/helperMocks/photoListMock';
 
-const { result } = renderHook(() => PhotosListMock);
+const { result } = renderHook(() => PhotosList);
 const roverState = {
   rover_name: 'Curiosity',
   photos: [
