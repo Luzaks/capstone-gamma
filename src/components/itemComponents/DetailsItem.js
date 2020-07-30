@@ -66,7 +66,7 @@ const DetailsItem = ({
 DetailsItem.propTypes = {
   rover: PropTypes.objectOf(PropTypes.any).isRequired,
   sol: PropTypes.number.isRequired,
-  earthDate: PropTypes.number.isRequired,
+  earthDate: PropTypes.string.isRequired,
   fullName: PropTypes.string.isRequired,
   camName: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,

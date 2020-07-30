@@ -26,7 +26,7 @@ class Item extends Component {
     const { lastVisited } = this.props;
 
     const itemHelper = (lastVisited, camera) => {
-      if (lastVisited === undefined || camera === undefined) return <UndefinedError />;
+      if (lastVisited === undefined && camera === undefined) return <UndefinedError />;
       return (
         <DetailsItem
           id={photo.id}
@@ -50,13 +50,7 @@ class Item extends Component {
 Item.propTypes = {
   photo: PropTypes.objectOf(PropTypes.any).isRequired,
   addVisitedId: PropTypes.func.isRequired,
-  rover: PropTypes.objectOf(PropTypes.any).isRequired,
-  sol: PropTypes.number.isRequired,
-  earth_date: PropTypes.number.isRequired,
-  full_name: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  lastVisited: PropTypes.bool.isRequired,
-  img_src: PropTypes.string.isRequired,
+  lastVisited: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Item);

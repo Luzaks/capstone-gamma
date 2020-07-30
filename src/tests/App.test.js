@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import AppMock from './mocks/AppMock';
+import AppMock from './mocks/componentMocks/AppMock';
 import fetchApi from '../Redux/actions/actions';
 
 const fetched = fetchApi('Curiosity', '1');
