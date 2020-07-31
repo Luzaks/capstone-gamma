@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const DetailsItem = ({
-  sol, earthDate, fullName, camName, rover, id, imgSrc,
+  sol, earthDate, fullName, camName, rover, id, imgSrc, addVis,
 }) => (
   <div className="item-info-container d-flex">
     <div className="left item-description d-flex flex-column align-items-center justify-content-center">
       <nav className="item-nav-bar">
         <ul>
-          <Link to={{ pathname: '/' }}>
+          <Link
+            to={{ pathname: '/' }}
+            onClick={() => addVis(id)}
+          >
             <li> ← go back</li>
           </Link>
         </ul>
@@ -71,6 +74,7 @@ DetailsItem.propTypes = {
   camName: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   imgSrc: PropTypes.string.isRequired,
+  addVis: PropTypes.func.isRequired,
 };
 
 export default DetailsItem;

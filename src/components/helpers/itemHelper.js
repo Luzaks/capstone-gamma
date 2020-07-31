@@ -2,11 +2,12 @@ import React from 'react';
 import UndefinedError from '../itemComponents/UndefinedError';
 import DetailsItem from '../itemComponents/DetailsItem';
 
-const itemHelper = (lastVisited, photo) => {
+const itemHelper = (lastVisited, photo, addVisitedId) => {
   if (lastVisited === undefined && photo.camera === undefined) return <UndefinedError />;
   return (
     <DetailsItem
       id={photo.id}
+      addVis={addVisitedId}
       imgSrc={photo.img_src}
       fullName={photo.camera.full_name}
       camName={photo.camera.name}

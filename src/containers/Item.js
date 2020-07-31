@@ -17,12 +17,11 @@ class Item extends Component {
   render() {
     const { photo } = this.props;
     const { addVisitedId } = this.props;
-    addVisitedId(photo.id);
     const { lastVisited } = this.props;
 
     return (
       <div className="item-container d-flex flex-column align-items-center justify-content-center">
-        { itemHelper(lastVisited, photo) }
+        { itemHelper(lastVisited, photo, addVisitedId) }
       </div>
     );
   }
