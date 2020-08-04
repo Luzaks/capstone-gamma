@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'DomillionBrushFree';
+  src:
+    local('DomillionBrushFree'),
+    url('../assets/fonts/DomillionBrushFree.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ImpactLabel';
+  src:
+    local('ImpactLabel'),
+    url('../assets/fonts/Impact_Label.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vonique';
+  src:
+    local('Vonique'),
+    url('../assets/fonts/Vonique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Opinio';
+  src:
+    local('Opinio'),
+    url('../assets/fonts/Opinio.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MeganJune';
+  src:
+    local('MeganJune'),
+    url('../assets/fonts/MeganJune.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fcf6f2 !important;
+  color: #000 !important;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+body * {
+  transition: all 500ms ease-in-out;
+}
+
+.main-container {
+  margin: 0 !important;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
